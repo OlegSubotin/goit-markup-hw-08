@@ -13,8 +13,10 @@
 }
 
 .site-nav {
-  display: flex;
   display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 }
 
 .site-nav__item {
@@ -76,13 +78,25 @@
 
 .contacts {
   margin-left: auto;
-  display: flex;
   display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
 
 .contacts__item {
-  &:not(:last-child) {
-    margin-right: 50px;
+  @media screen and (min-width: 768px) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
   }
 }
 
@@ -90,16 +104,20 @@
   display: flex;
   align-items: center;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: calc(14 / 12);
   letter-spacing: 0.02em;
   color: var(--main-text-color);
-  padding-top: 32px;
-  padding-bottom: 32px;
   transition: color var(--timing) var(--timing-function);
   &:hover,
   &:focus {
     color: var(--accent-color);
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    line-height: calc(16 / 14);
   }
 }
 
@@ -112,6 +130,9 @@
   margin: 22px 23px 22px auto;
   border: none;
   background-color: transparent;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .menu-close {
@@ -134,6 +155,13 @@
   background-color: #ffffff;
   top: 0;
   padding: 10px 0 0 40px;
+  @media screen and (min-width: 768px) {
+    visibility: hidden;
+  }
+}
+
+.mob-down {
+  margin-top: 302px;
 }
 
 .mob-menu__link {
@@ -156,6 +184,9 @@
   }
 }
 
+.mob-menu__current {
+  color: var(--accent-color);
+}
 .mob-contacts {
   margin-bottom: 64px;
 }

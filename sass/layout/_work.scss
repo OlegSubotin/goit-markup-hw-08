@@ -1,7 +1,17 @@
 .work {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   justify-content: center;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+
+.work-section__title {
+  visibility: hidden;
+  @media screen and (min-width: 1200px) {
+    visibility: visible;
+  }
 }
 
 .work__item {

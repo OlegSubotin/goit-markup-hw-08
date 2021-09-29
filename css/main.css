@@ -44,22 +44,20 @@ a {
 
 .container {
   width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
   margin: 0 auto;
 }
 
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 }
 
@@ -563,7 +561,7 @@ a {
   .features__item:nth-child(odd) {
     margin-right: 30px;
   }
-  .features__item:nth-child(3n) {
+  .features__item:nth-last-child(2) {
     margin-bottom: 0;
   }
 }
@@ -571,6 +569,7 @@ a {
 @media screen and (min-width: 1200px) {
   .features__item {
     width: 270px;
+    margin-bottom: 0;
     margin-right: 30px;
   }
   .features__item:nth-child(4n) {
@@ -663,22 +662,55 @@ a {
 }
 
 .section__other-background .section-title {
-  padding-top: 94px;
+  padding-top: 60px;
 }
 
-.team-list {
-  display: flex;
+@media screen and (min-width: 1200px) {
+  .section__other-background .section-title {
+    padding-top: 94px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .team-list__item {
-  width: 270px;
+  width: 100%;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
 .team-list__item:not(:last-child) {
-  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .team-list__item {
+    width: 354px;
+  }
+  .team-list__item:nth-last-child(2) {
+    margin-bottom: 0;
+  }
+  .team-list__item:nth-child(odd) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-list__item {
+    width: 270px;
+  }
+  .team-list__item:nth-child(n + 1) {
+    margin-bottom: 0;
+  }
+  .team-list__item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .team-list__description {
@@ -726,10 +758,6 @@ a {
 
 .socials__icon {
   fill: currentColor;
-}
-
-.section-title {
-  padding-top: 60;
 }
 
 .customers {

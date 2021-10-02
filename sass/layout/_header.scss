@@ -127,7 +127,8 @@
 }
 
 .menu-open {
-  margin: 22px 23px 22px auto;
+  margin-right: 8px;
+  margin-left: auto;
   border: none;
   background-color: transparent;
   @media screen and (min-width: 768px) {
@@ -152,6 +153,7 @@
   width: 100vw;
   height: 100vh;
   position: fixed;
+  z-index: 999;
   background-color: #ffffff;
   top: 0;
   padding: 10px 0 0 40px;
@@ -187,6 +189,7 @@
 .mob-menu__current {
   color: var(--accent-color);
 }
+
 .mob-contacts {
   margin-bottom: 64px;
 }

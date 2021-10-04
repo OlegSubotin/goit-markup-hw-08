@@ -1,11 +1,11 @@
 .features {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .features__item {
-  width: 450px;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;

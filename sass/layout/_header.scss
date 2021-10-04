@@ -156,14 +156,12 @@
   z-index: 999;
   background-color: #ffffff;
   top: 0;
-  padding: 10px 0 0 40px;
+  padding-top: 10px;
+  padding-bottom: 48px;
+  padding-left: 40px;
   @media screen and (min-width: 768px) {
     visibility: hidden;
   }
-}
-
-.mob-down {
-  margin-top: 302px;
 }
 
 .mob-menu__link {

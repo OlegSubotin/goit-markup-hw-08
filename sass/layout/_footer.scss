@@ -5,16 +5,20 @@
 }
 
 .footer__left-middle {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     margin-bottom: 60px;
     display: flex;
     align-items: baseline;
-    margin-left: 76px;
+    justify-content: space-around;
   }
   @media screen and (min-width: 1200px) {
     display: flex;
     flex-grow: 1;
     align-items: baseline;
+    margin-right: 93px;
   }
 }
 
@@ -22,9 +26,7 @@
   @media screen and (max-width: 767px) {
     margin-bottom: 60px;
   }
-  @media screen and (min-width: 768px) {
-    margin-right: 165px;
-  }
+
   @media screen and (min-width: 1200px) {
     margin-right: 70px;
   }
@@ -61,15 +63,6 @@
   font-size: 14px;
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
-}
-
-.footer-middle {
-  @media screen and (max-width: 767px) {
-    margin-bottom: 60px;
-  }
-  @media screen and (min-width: 1200px) {
-    margin-right: 93px;
-  }
 }
 
 .footer__title {
@@ -117,9 +110,13 @@
 }
 
 .footer__form {
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  align-items: center;
   @media screen and (min-width: 1200px) {
     display: flex;
+    flex-direction: row;
   }
 }
 
@@ -127,8 +124,9 @@
   @media screen and (min-width: 1200px) {
     width: 358px;
   }
-  width: 450px;
   height: 50px;
+  width: 100%;
+  max-width: 450px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -142,8 +140,6 @@
     font-weight: 400;
     font-size: 16px;
     line-height: calc(20 / 16);
-    display: flex;
-    align-items: center;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
   }
@@ -158,15 +154,13 @@
 .footer__button {
   @media screen and (min-width: 1200px) {
     display: inline-flex;
+    justify-content: center;
+    align-items: center;
     margin-left: 12px;
-  }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    margin-left: 276px;
   }
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 125px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -185,7 +179,5 @@
 }
 
 .footer__plane-icon {
-  display: inline-block;
-  align-items: center;
   margin-left: 10px;
 }

@@ -138,7 +138,10 @@
 
 .menu-close {
   display: block;
-  margin: 10px 15px auto auto;
+  margin-top: 15px;
+  margin-right: 25px;
+  margin-left: auto;
+  margin-bottom: 8px;
   border: none;
   background-color: transparent;
   fill: #212121;
@@ -162,6 +165,13 @@
   @media screen and (min-width: 768px) {
     visibility: hidden;
   }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mob-menu__list {
+  margin-bottom: auto;
 }
 
 .mob-menu__link {

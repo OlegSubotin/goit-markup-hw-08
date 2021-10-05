@@ -1,6 +1,6 @@
 .modal-window {
   position: absolute;
-  max-height: 609px;
+  min-height: 609px;
   max-width: 450px;
   margin-left: auto;
   margin-right: auto;
@@ -8,7 +8,7 @@
   right: 0;
   @media screen and (min-width: 1200px) {
     min-height: 581px;
-    width: 528px;
+    min-width: 528px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);

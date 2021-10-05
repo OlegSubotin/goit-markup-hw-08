@@ -855,8 +855,13 @@ a {
 }
 
 .portfolio-list__item {
-  margin-bottom: 30px;
   position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio-list__item:not(:first-child) {
+    margin-top: 30px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1177,7 +1182,7 @@ a {
 
 .modal-window {
   position: absolute;
-  max-height: 609px;
+  min-height: 609px;
   max-width: 450px;
   margin-left: auto;
   margin-right: auto;
@@ -1192,7 +1197,7 @@ a {
 @media screen and (min-width: 1200px) {
   .modal-window {
     min-height: 581px;
-    width: 528px;
+    min-width: 528px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -1328,15 +1333,14 @@ a {
   letter-spacing: 0.03em;
   color: var(--main-text-color);
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 @media screen and (min-width: 1200px) {
   .modal__form-checkbox-text {
     font-size: 14px;
     line-height: calc(24 / 12);
+    display: flex;
+    align-items: center;
   }
 }
 

@@ -8,7 +8,12 @@
 }
 
 .portfolio-list__item {
-  margin-bottom: 30px;
+  @media screen and (max-width: 767px) {
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+  }
+
   position: relative;
   @media screen and (min-width: 768px) {
     flex-basis: calc(100% / 2 - var(--card-gap));
